@@ -1,8 +1,7 @@
 package model.entry;
 
-import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -11,8 +10,8 @@ public class Meeting extends Event {
     private Map<String, String> attendees; // Key = name, value = email
     private final Label LABEL;
 
-    public Meeting(Date date, Time time) {
-        super(date, time);
+    public Meeting(LocalDateTime date) {
+        super(date);
         LABEL = Label.MEETING;
     }
 

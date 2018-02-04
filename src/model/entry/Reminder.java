@@ -1,8 +1,7 @@
 package model.entry;
 
-import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Reminder extends Entry{
@@ -10,8 +9,8 @@ public class Reminder extends Entry{
     private final Label LABEL;
     private List<String> notes; // every entry object will hold a list of strings(notes)
 
-    public Reminder(Date date, Time time, Label label) {
-        super(date, time);
+    public Reminder(LocalDateTime date) {
+        super(date);
         this.notes = new ArrayList<String>();
         this.LABEL = Label.REMINDER;
     }

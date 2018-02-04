@@ -1,14 +1,13 @@
 package model.entry;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Event extends Entry {
 
     private final Label LABEL;
 
-    public Event(Date date, Time time) {
-        super(date, time);
+    public Event(LocalDateTime date) {
+        super(date);
         LABEL = Label.EVENT;
 
     }

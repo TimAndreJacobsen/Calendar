@@ -10,3 +10,6 @@
     * Create a new project from a UML diagram
     * Create the structure from UML
     * Specify specifications ( //Requires: //Modifies: //Effects: )
+
+### Learning to use built in Java API
+    * Date from Java SE 8

@@ -2,19 +2,19 @@ package model.calendar;
 
 import model.entry.Entry;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Calendar {
 
-    private Date date;
+    private LocalDateTime date;
     private String owner;
     private String email;
     private List<Entry> entries;
 
     public Calendar(String owner, String email) {
-        this.date = new Date();
+        this.date = LocalDateTime.now();
         this.owner = owner;
         this.email = email;
         this.entries = new ArrayList<Entry>();

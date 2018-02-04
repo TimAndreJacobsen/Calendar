@@ -1,16 +1,11 @@
 package model.entry;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public abstract class Entry {
 
-    private Date date;
-    private Time time;
-
-
-
+    private LocalDateTime date;
     private boolean isRepeating;
 
     private List<Entry> entries; // list to contain all of the entries for the calendar.
@@ -20,18 +15,14 @@ public abstract class Entry {
     //REQUIRES: input date, time,
     //MODIFIES: Instantiates new event/meeting/reminder
     //EFFECTS : constructor
-    public Entry(Date date, Time time) {
+    public Entry(LocalDateTime date) {
         this.date = date;
-        this.time = time;
         this.isRepeating = false;
     }
 
     // Getters
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
-    }
-    public Time getTime() {
-        return time;
     }
     public abstract Label getLabel();
     public List<Entry> getRepitition() {
@@ -74,6 +65,11 @@ public abstract class Entry {
     public boolean copy(Entry entry) {
         //TODO implement copy.
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "" + this.getLabel() + ": " + getDate();
     }
 
 
