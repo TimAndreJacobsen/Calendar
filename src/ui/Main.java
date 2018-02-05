@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // play
+        // experimentation
         System.out.println("What how why, lets find out!");
         LocalDateTime today = LocalDateTime.of(2018, 2, 04, 22, 00);
         System.out.println(today.toString());
@@ -24,12 +24,12 @@ public class Main {
         // Setup
         Calendar calendar = new Calendar("bob", "bob@saget.com");
 
-        Entry entryEvent = new Event(LocalDateTime.now().plusDays(1));
-        Entry entryReminder = new Reminder(LocalDateTime.now().plusDays(4));
-        Entry entryMeeting = new Meeting(LocalDateTime.now().plusDays(3));
-        Event event = new Event(LocalDateTime.now().plusDays(4));
-        Meeting meeting = new Meeting(LocalDateTime.now().plusDays(5));
-        Reminder reminder = new Reminder(LocalDateTime.now().plusDays(6));
+        Entry entryEvent = new Event(LocalDateTime.now().plusDays(1), "tomorrow");
+        Entry entryReminder = new Reminder(LocalDateTime.now().plusDays(2),"day after tomorrow", "remindme!");
+        Entry entryMeeting = new Meeting(LocalDateTime.now().plusDays(3), "3 days from now");
+        Event event = new Event(LocalDateTime.now().plusDays(4), "4 days from now");
+        Meeting meeting = new Meeting(LocalDateTime.now().plusDays(5), "5 days from now");
+        Reminder reminder = new Reminder(LocalDateTime.now().plusDays(6), "6 days from now", "remindme!!");
 
         // Usage
         calendar.addEntry(entryEvent);
