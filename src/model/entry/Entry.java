@@ -25,15 +25,16 @@ public abstract class Entry {
         this.date = date;
         this.isRepeating = false;
         this.title = title;
+
     }
 
     // Getters
     public LocalDateTime getDate() {
         return date;
     }
-    public Label getLabel() {
-        return this.label;
-    }
+
+    public abstract Label getLabel();
+
     public List<Entry> getRepitition() {
         return this.repititions;
     }
